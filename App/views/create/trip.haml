@@ -10,5 +10,11 @@
         - @agents.each do |agent|
           %option{value:agent.id}= agent.name
   .form-group
+    %label.col-sm-2.control-label Activity
+    .col-sm-10
+      %select.form-control{name:'activity_id', multiple:'multiple'}
+        - @activities.each do |activity|
+          %option{value:activity.id}= activity.name
+  .form-group
     .col-sm-offset-2.col-sm-10
       %button.btn.btn-default{type:'submit'} Submit
