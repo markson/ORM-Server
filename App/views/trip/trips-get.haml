@@ -8,11 +8,14 @@
         %th Activities
     %tbody
       -@trips.each do |trip|
-        %tr.ancherRow{:'data-id' => trip.id}
+        %tr.marker-row{:'data-id' => trip.id}
           %td= trip.agents.first.name
           %td= trip.booked_at
           %td 张王赵李
-          %td= trip.activities.first.name
-.col-md-4.mapView
+          %td
+            .fix-width
+              %ul
+                - trip.activities.each do |activity|
+                  %li{:'data-lat' => activity.latitude, :'data-lng' => activity.longitude}= activity.name
+.col-md-4
   = haml :_map
-

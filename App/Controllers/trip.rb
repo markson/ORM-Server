@@ -1,11 +1,13 @@
 get '/trips' do
-	@partials = ["google_map_api", "ancher-row.js"]
+	# @partials = ["google_map_api",'show-map.js', "ancher-row.js"]
+	@partials = ["google_map_api",'show-map.js', 'marker.js']
 	@trips = Trip.all
 	haml :'trip/trips-get'
 end
 
 post '/trips' do
 	activity_ids = multiple_params_parse("activity_id")
+	customer_ids = multiple_params_parse("customer_id")
 	trip = Trip.create(
 		booked_at:params['booked_at']
 	)

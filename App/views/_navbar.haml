@@ -5,6 +5,16 @@
     %div
       %ul.nav.navbar-nav
         %li.dropdown
+          %a.dropdown-toggle{href:'/trips', :'data-toggle' => 'dropdown'}
+            Trip
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href:'/trips'} List All
+            %li.divider
+            %li
+              %a{href:'/create/trip'} Create
+        %li.dropdown
           %a.dropdown-toggle{href:'/activities', :'data-toggle' => 'dropdown'}
             Activity
             %b.caret
@@ -44,13 +54,3 @@
             %li.divider
             %li
               %a{href:'/create/customer'} Create
-        %li.dropdown
-          %a.dropdown-toggle{href:'/trips', :'data-toggle' => 'dropdown'}
-            Trip
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href:'/trips'} List All
-            %li.divider
-            %li
-              %a{href:'/create/trip'} Create

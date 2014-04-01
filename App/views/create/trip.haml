@@ -10,7 +10,13 @@
         - @agents.each do |agent|
           %option{value:agent.id}= agent.name
   .form-group
-    %label.col-sm-2.control-label Activity
+    %label.col-sm-2.control-label Customers
+    .col-sm-10
+      %select.form-control{name:'customer_id', multiple:'multiple'}
+        - @customers.each do |customer|
+          %option{value:customer.id}= "#{customer.f_name} #{customer.l_name}"
+  .form-group
+    %label.col-sm-2.control-label Activities
     .col-sm-10
       %select.form-control{name:'activity_id', multiple:'multiple'}
         - @activities.each do |activity|

@@ -18,6 +18,7 @@ end
 get '/create/trip' do
 	@activities = Activity.all
 	@agents = Agent.all
+	@customers = Customer.all
 	haml :'create/trip'
 end
 
