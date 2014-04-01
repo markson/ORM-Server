@@ -12,4 +12,4 @@ enable :partial_underscores
 # 	content_type 'application/json'
 # end
 DataMapper.auto_upgrade!
-DataMapper.auto_migrate!
+#DataMapper.auto_migrate!

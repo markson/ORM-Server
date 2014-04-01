@@ -1,15 +1,18 @@
-%table.table.table-hover{:'data-resource' => "customer"}
-  %thead
-    %tr
-      %th Agent
-      %th Booking At
-      %th Customers
-      %th Activities
-  %tbody
-    -@trips.each do |trip|
-      %tr.ancherRow{:'data-id' => trip.id}
-        %td= trip.agents.first.name
-        %td= trip.booked_at
-        %td 张王赵李
-        %td= trip.activities.first.name
+.col-md-8
+  %table.table.table-hover{:'data-resource' => "customer"}
+    %thead
+      %tr
+        %th Agent
+        %th Booking At
+        %th Customers
+        %th Activities
+    %tbody
+      -@trips.each do |trip|
+        %tr.ancherRow{:'data-id' => trip.id}
+          %td= trip.agents.first.name
+          %td= trip.booked_at
+          %td 张王赵李
+          %td= trip.activities.first.name
+.col-md-4.mapView
+  = haml :_map
 

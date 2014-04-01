@@ -1,4 +1,5 @@
 get '/trips' do
+	@partials = ["google_map_api", "ancher-row.js"]
 	@trips = Trip.all
 	haml :'trip/trips-get'
 end

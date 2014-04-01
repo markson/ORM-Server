@@ -1,2 +1,8 @@
+body {
+  min-width: 1000px; }
+
 .ancherRow {
   cursor: pointer; }
+
+.bg-color {
+  background-color: #BA85BA; }
